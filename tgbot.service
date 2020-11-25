@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram Bot
+After=network.target
+
+[Service]
+User=zkoder
+Group=zkoder
+
+WorkingDirectory=/home/zkoder/tel_bot/
+Environment="PYTHONPATH=/home/zkoder/tel_bot/"
+ExecStart=/home/zkoder/tel_bot/.venv/bin/python /home/zkoder/tel_bot/SellBot.py
+
+[Install]
+WantedBy=multi-user.target
